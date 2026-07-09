@@ -1,0 +1,27 @@
+Route Structure
+
+/
+
+/trainers
+
+/trainers/:id
+
+/memberships
+
+/classes
+
+/booking
+
+/login
+
+/register
+
+/profile
+
+/admin
+
+/admin/trainers
+
+/admin/memberships
+
+/admin/classes
