@@ -57,8 +57,8 @@ const StatsSection = () => {
                 group
                 rounded-3xl
                 border
-                border-white/10
-                bg-white/5
+                border-[var(--border-glass)]
+                bg-[var(--bg-glass)]
                 p-8
                 text-center
                 backdrop-blur-xl
@@ -66,6 +66,7 @@ const StatsSection = () => {
                 duration-300
                 hover:border-[#00E676]/30
                 hover:shadow-[0_0_30px_rgba(0,230,118,.15)]
+                glass-card
               "
             >
               <h3 className="text-5xl font-black text-[#00E676]">
@@ -76,7 +77,7 @@ const StatsSection = () => {
                 />
               </h3>
 
-              <p className="mt-3 text-gray-400 transition-colors duration-300 group-hover:text-gray-300">
+              <p className="mt-3 text-[var(--text-secondary)] transition-colors duration-300 group-hover:text-[var(--text-primary)]">
                 {item.title}
               </p>
             </motion.div>

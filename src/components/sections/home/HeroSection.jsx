@@ -34,7 +34,7 @@ const HeroSection = () => {
               Transform Your Life
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg text-gray-400">
+            <p className="mt-6 max-w-xl text-lg text-[var(--text-secondary)]">
               Train with elite coaches, personalized programs, and premium
               facilities designed to unlock your full potential.
             </p>
@@ -47,11 +47,11 @@ const HeroSection = () => {
 
             {/* Trusted By */}
             <div className="mt-16">
-              <p className="mb-5 text-sm uppercase tracking-[4px] text-gray-500">
+              <p className="mb-5 text-sm uppercase tracking-[4px] text-[var(--text-tertiary)]">
                 Trusted By Athletes
               </p>
 
-              <div className="flex flex-wrap gap-8 text-gray-400 md:gap-10">
+              <div className="flex flex-wrap gap-8 text-[var(--text-tertiary)] md:gap-10">
                 <span>Nike</span>
                 <span>Gymshark</span>
                 <span>Technogym</span>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -29,8 +30,10 @@ const FeaturedTrainersSection = () => {
 
         {/* View All Trainers */}
         <div className="mb-12 flex justify-center">
-          <button
+          <Link
+            to="/trainers"
             className="
+              inline-flex
               rounded-2xl
               border
               border-[#00E676]/20
@@ -46,7 +49,7 @@ const FeaturedTrainersSection = () => {
             "
           >
             View All Trainers
-          </button>
+          </Link>
         </div>
 
         <Swiper

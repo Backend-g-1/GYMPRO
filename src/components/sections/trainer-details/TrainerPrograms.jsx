@@ -38,7 +38,7 @@ const TrainerPrograms = ({ trainer }) => {
             mb-8
             text-3xl
             font-bold
-            text-white
+            text-[var(--text-primary)]
           "
         >
           Training Programs
@@ -70,12 +70,13 @@ const TrainerPrograms = ({ trainer }) => {
                   group
                   rounded-3xl
                   border
-                  border-white/10
-                  bg-white/5
+                  border-[var(--border-glass)]
+                  bg-[var(--bg-glass)]
                   p-6
                   transition
                   duration-300
                   hover:border-purple-500/50
+                  glass-card
                 "
             >
               <motion.div
@@ -103,7 +104,7 @@ const TrainerPrograms = ({ trainer }) => {
                 className="
                     text-xl
                     font-semibold
-                    text-white
+                    text-[var(--text-primary)]
                   "
               >
                 {program}
@@ -113,7 +114,7 @@ const TrainerPrograms = ({ trainer }) => {
                 className="
                     mt-3
                     text-sm
-                    text-gray-400
+                    text-[var(--text-secondary)]
                   "
               >
                 Personalized training designed for your fitness goals.

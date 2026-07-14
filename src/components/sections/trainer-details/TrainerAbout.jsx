@@ -17,16 +17,17 @@ const TrainerAbout = ({ trainer }) => {
             className="
               rounded-3xl
               border
-              border-white/10
-              bg-white/5
+              border-[var(--border-glass)]
+              bg-[var(--bg-glass)]
               p-8
+              glass-card
             "
           >
             <h2
               className="
                 text-3xl
                 font-bold
-                text-white
+                text-[var(--text-primary)]
                 mb-5
               "
             >
@@ -36,7 +37,7 @@ const TrainerAbout = ({ trainer }) => {
             <p
               className="
                 leading-8
-                text-gray-400
+                text-[var(--text-secondary)]
               "
             >
               {trainer.bio}
@@ -49,16 +50,17 @@ const TrainerAbout = ({ trainer }) => {
             className="
               rounded-3xl
               border
-              border-white/10
-              bg-white/5
+              border-[var(--border-glass)]
+              bg-[var(--bg-glass)]
               p-8
+              glass-card
             "
           >
             <h2
               className="
                 text-3xl
                 font-bold
-                text-white
+                text-[var(--text-primary)]
                 mb-5
               "
             >
@@ -77,7 +79,7 @@ const TrainerAbout = ({ trainer }) => {
                         flex
                         items-center
                         gap-3
-                        text-gray-300
+                        text-[var(--text-secondary)]
                       "
                 >
                   <span

@@ -28,28 +28,28 @@ const MembershipPreviewSection = () => {
         <div className="mb-12 flex justify-center">
           <div
             className="
-      flex
-      items-center
-      rounded-2xl
-      border
-      border-white/10
-      bg-white/5
-      p-1
-      backdrop-blur-xl
-    "
+              flex
+              items-center
+              rounded-2xl
+              border
+              border-[var(--border-glass)]
+              bg-[var(--bg-glass)]
+              p-1
+              backdrop-blur-xl
+            "
           >
             <button
               onClick={() => setBilling("monthly")}
               className={`
-        rounded-xl
-        px-6
-        py-3
-        text-sm
-        font-medium
-        transition-all
+                rounded-xl
+                px-6
+                py-3
+                text-sm
+                font-medium
+                transition-all
 
-        ${billing === "monthly" ? "bg-[#00E676] text-black" : "text-gray-400"}
-      `}
+                ${billing === "monthly" ? "bg-[#00E676] text-black" : "text-[var(--text-secondary)]"}
+              `}
             >
               Monthly
             </button>
@@ -57,16 +57,16 @@ const MembershipPreviewSection = () => {
             <button
               onClick={() => setBilling("yearly")}
               className={`
-        relative
-        rounded-xl
-        px-6
-        py-3
-        text-sm
-        font-medium
-        transition-all
+                relative
+                rounded-xl
+                px-6
+                py-3
+                text-sm
+                font-medium
+                transition-all
 
-        ${billing === "yearly" ? "bg-[#00E676] text-black" : "text-gray-400"}
-      `}
+                ${billing === "yearly" ? "bg-[#00E676] text-black" : "text-[var(--text-secondary)]"}
+              `}
             >
               Yearly
               <span

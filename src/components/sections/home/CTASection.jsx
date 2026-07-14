@@ -44,13 +44,14 @@ const CTASection = () => {
             overflow-hidden
             rounded-[40px]
             border
-            border-white/10
-            bg-white/5
+            border-[var(--border-glass)]
+            bg-[var(--bg-glass)]
             p-12
             text-center
             backdrop-blur-xl
             transition-all
             duration-500
+            glass-card
 
             before:absolute
             before:inset-0
@@ -88,8 +89,8 @@ const CTASection = () => {
               justify-center
               rounded-2xl
               border
-              border-white/10
-              bg-white/5
+              border-[var(--border-glass)]
+              bg-[var(--bg-glass)]
               backdrop-blur-xl
               lg:flex
             "
@@ -140,7 +141,7 @@ const CTASection = () => {
               >
                 <Users size={16} className="text-[#00E676]" />
 
-                <span className="text-sm text-gray-300">
+                <span className="text-sm text-[var(--text-secondary)]">
                   5000+ Active Members
                 </span>
               </motion.div>
@@ -151,7 +152,7 @@ const CTASection = () => {
               <span className="text-[#00E676]"> Your Body</span>?
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--text-secondary)]">
               Join thousands of athletes already training with our world-class
               coaches, premium facilities, and proven fitness programs.
             </p>

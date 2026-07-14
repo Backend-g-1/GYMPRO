@@ -80,18 +80,19 @@ const TrainerStats = ({ trainer }) => {
               className="
                   rounded-3xl
                   border
-                  border-white/10
-                  bg-white/5
+                  border-[var(--border-glass)]
+                  bg-[var(--bg-glass)]
                   p-6
                   text-center
                   backdrop-blur
+                  glass-card
                 "
             >
               <h3
                 className="
                     text-3xl
                     font-bold
-                    text-white
+                    text-[var(--text-primary)]
                   "
               >
                 {item.value}
@@ -100,7 +101,7 @@ const TrainerStats = ({ trainer }) => {
               <p
                 className="
                     mt-2
-                    text-gray-400
+                    text-[var(--text-secondary)]
                   "
               >
                 {item.label}

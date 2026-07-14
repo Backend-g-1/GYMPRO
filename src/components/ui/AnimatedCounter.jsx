@@ -6,6 +6,8 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = "" }) => {
 
   const counterRef = useRef(null);
 
+  const decimals = Number.isInteger(end) ? 0 : String(end).split(".")[1]?.length || 0;
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -38,7 +40,9 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = "" }) => {
 
       const progress = Math.min((timestamp - startTime) / duration, 1);
 
-      setCount(Math.floor(progress * end));
+      const current = progress * end;
+
+      setCount(decimals > 0 ? parseFloat(current.toFixed(decimals)) : Math.floor(current));
 
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -46,11 +50,11 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = "" }) => {
     };
 
     requestAnimationFrame(animate);
-  }, [started, end, duration]);
+  }, [started, end, duration, decimals]);
 
   return (
     <span ref={counterRef}>
-      {count.toLocaleString()}
+      {decimals > 0 ? count.toFixed(decimals) : count.toLocaleString()}
       {suffix}
     </span>
   );

@@ -77,8 +77,8 @@ const TrustSection = () => {
                   overflow-hidden
                   rounded-4xl
                   border
-                  border-white/10
-                  bg-white/5
+                  border-[var(--border-glass)]
+                  bg-[var(--bg-glass)]
                   p-8
                   text-center
                   backdrop-blur-xl
@@ -86,6 +86,7 @@ const TrustSection = () => {
                   duration-500
                   hover:border-[#00E676]/30
                   hover:shadow-[0_0_40px_rgba(0,230,118,.15)]
+                  glass-card
                 "
               >
                 {/* Neon Icon */}
@@ -118,7 +119,7 @@ const TrustSection = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-4 text-gray-400">{item.title}</p>
+                <p className="mt-4 text-[var(--text-secondary)]">{item.title}</p>
 
                 {/* Glow Effect */}
                 <div

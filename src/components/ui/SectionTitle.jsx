@@ -19,10 +19,14 @@ const SectionTitle = ({ badge, title, description }) => {
         </span>
       )}
 
-      <h2 className="mt-4 text-4xl font-bold">{title}</h2>
+      <h2 className="mt-4 text-4xl font-bold text-[var(--text-primary)]">
+        {title}
+      </h2>
 
       {description && (
-        <p className="mt-4 text-gray-400 max-w-2xl mx-auto">{description}</p>
+        <p className="mt-4 text-[var(--text-secondary)] max-w-2xl mx-auto">
+          {description}
+        </p>
       )}
     </div>
   );

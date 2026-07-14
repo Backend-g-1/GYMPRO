@@ -3,7 +3,6 @@ import { Check, Crown } from "lucide-react";
 
 const MembershipCard = ({ plan, billing }) => {
   const yearlyPrice = Math.floor(plan.price * 12 * 0.8);
-
   const displayPrice = billing === "monthly" ? plan.price : yearlyPrice;
 
   return (
@@ -35,6 +34,7 @@ const MembershipCard = ({ plan, billing }) => {
         p-8
         transition-all
         duration-300
+        glass-card
 
         ${
           plan.popular
@@ -44,8 +44,8 @@ const MembershipCard = ({ plan, billing }) => {
               shadow-[0_0_40px_rgba(0,230,118,.18)]
             `
             : `
-              border-white/10
-              bg-white/5
+              border-[var(--border-glass)]
+              bg-[var(--bg-glass)]
             `
         }
       `}
@@ -75,7 +75,9 @@ const MembershipCard = ({ plan, billing }) => {
       )}
 
       {/* Plan */}
-      <h3 className="text-3xl font-bold">{plan.name}</h3>
+      <h3 className="text-3xl font-bold text-[var(--text-primary)]">
+        {plan.name}
+      </h3>
 
       {/* Price */}
       <div className="mt-6">
@@ -89,12 +91,12 @@ const MembershipCard = ({ plan, billing }) => {
             opacity: 1,
             y: 0,
           }}
-          className="text-6xl font-black"
+          className="text-6xl font-black text-[var(--text-primary)]"
         >
           ${displayPrice}
         </motion.span>
 
-        <span className="ml-2 text-gray-400">
+        <span className="ml-2 text-[var(--text-secondary)]">
           /{billing === "monthly" ? "month" : "year"}
         </span>
       </div>
@@ -102,15 +104,15 @@ const MembershipCard = ({ plan, billing }) => {
       {billing === "yearly" && (
         <div
           className="
-      mt-4
-      inline-flex
-      rounded-full
-      bg-green-500/10
-      px-3
-      py-1
-      text-sm
-      text-[#00E676]
-    "
+            mt-4
+            inline-flex
+            rounded-full
+            bg-green-500/10
+            px-3
+            py-1
+            text-sm
+            text-[#00E676]
+          "
         >
           Save 20% Annually
         </div>
@@ -122,7 +124,7 @@ const MembershipCard = ({ plan, billing }) => {
           <div key={feature} className="flex items-center gap-3">
             <Check size={18} className="text-[#00E676]" />
 
-            <span className="text-gray-300">{feature}</span>
+            <span className="text-[var(--text-secondary)]">{feature}</span>
           </div>
         ))}
       </div>

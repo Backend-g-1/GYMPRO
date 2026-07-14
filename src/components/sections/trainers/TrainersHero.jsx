@@ -1,10 +1,17 @@
+import { motion } from "framer-motion";
+
 import Container from "../../ui/Container";
 
 const TrainersHero = () => {
   return (
     <section className="relative py-32">
       <Container>
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
           <span
             className="
               inline-flex
@@ -23,10 +30,10 @@ const TrainersHero = () => {
 
           <h1 className="mt-6 text-5xl font-black">Meet Our Trainers</h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-gray-400">
+          <p className="mx-auto mt-5 max-w-2xl text-[var(--text-secondary)]">
             Certified professionals ready to help you reach your fitness goals.
           </p>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

@@ -4,7 +4,7 @@ import Container from "../../ui/Container";
 
 const TrainerProfileHero = ({ trainer }) => {
   return (
-    <section className="py-20">
+    <section className="py-20 pt-32">
       <Container>
         <div
           className="

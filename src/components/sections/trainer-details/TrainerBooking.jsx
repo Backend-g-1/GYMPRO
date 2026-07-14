@@ -26,16 +26,17 @@ const TrainerBooking = ({ trainer }) => {
           className="
             rounded-3xl
             border
-            border-white/10
+            border-[var(--border-glass)]
             bg-linear-to-r
             from-purple-500/20
-            to-white/5
+            to-[var(--bg-glass)]
             p-8
             lg:p-12
             transition-all
             duration-300
             hover:border-purple-500/40
             hover:shadow-[0_0_40px_rgba(168,85,247,0.15)]
+            glass-card
           "
         >
           <div

@@ -6,6 +6,7 @@ import TrainersFilter from "../../components/sections/trainers/TrainersFilter";
 import TrainersGrid from "../../components/sections/trainers/TrainersGrid";
 
 import { trainers } from "../../data/trainers";
+import Seo from "../../components/ui/Seo";
 
 const TrainersPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -53,6 +54,7 @@ const TrainersPage = () => {
 
   return (
     <>
+      <Seo title="Trainers" />
       <TrainersHero />
 
       <TrainersFilter
